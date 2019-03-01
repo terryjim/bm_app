@@ -5,7 +5,11 @@ export const getList = data => Request({
     method: 'POST',
     data
 })
-
+export const save = data => Request({
+    url: '/task/save',
+    method: 'POST',
+    data
+})
 //根据返回
 export const fillForm = (json) => (
     {

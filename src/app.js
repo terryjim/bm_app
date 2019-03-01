@@ -25,16 +25,16 @@ class App extends Component {
       'pages/task/taskForm'
     ],
     window: {
-      backgroundTextStyle: 'light',
+      backgroundTextStyle: 'dark',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: '行为管理',
-      navigationBarTextStyle: 'black'
+      navigationBarTextStyle: 'black' 
     },
     tabBar: {
-      backgroundColor: '#fff',
+      color: '#333',
       selectedColor: '#dc0032',
       backgroundColor: '#fff',
-      borderStyle: '#ccc',
+      borderStyle: 'black',
       list: [
         {
           pagePath: 'pages/index/index',
@@ -46,26 +46,26 @@ class App extends Component {
           text: '任务',
           iconPath: 'assets/images/view.png',
           selectedIconPath: 'assets/images/view-red.png'
-        },       
+        },
       ]
     }
   }
+  componentWillMount() { }
+  componentDidMount() { }
 
-  componentDidMount () {}
+  componentDidShow() { }
 
-  componentDidShow () {}
+  componentDidHide() { }
 
-  componentDidHide () {}
-
-  componentDidCatchError () {}
-
+  componentDidCatchError() { }
+  componentDidNotFound() { }
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
-  render () {
+  render() {
     return (
       <Provider store={store}>
-      <Index />
-    </Provider>
+        <Index />
+      </Provider>
     )
   }
 }
