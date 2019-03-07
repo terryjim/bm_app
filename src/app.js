@@ -4,7 +4,7 @@ import { Provider } from '@tarojs/redux'
 import Index from './pages/index'
 import models from './models'
 import dva from './utils/dva'
-import './app.scss'
+import './styles/base.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -20,8 +20,8 @@ const store = dvaApp.getStore();
 class App extends Component {
   config = {
     pages: [
-      'pages/index/index',
       'pages/task/index',
+      'pages/index/index',      
       'pages/task/taskForm'
     ],
     window: {
@@ -36,14 +36,14 @@ class App extends Component {
       backgroundColor: '#fff',
       borderStyle: 'black',
       list: [
-        {
-          pagePath: 'pages/index/index',
-          text: '首页',
-          iconPath: 'assets/images/view.png',
-          selectedIconPath: 'assets/images/view-red.png'
-        }, {
+         {
           pagePath: 'pages/task/index',
           text: '任务',
+          iconPath: 'assets/images/view.png',
+          selectedIconPath: 'assets/images/view-red.png'
+        },{
+          pagePath: 'pages/index/index',
+          text: '首页',
           iconPath: 'assets/images/view.png',
           selectedIconPath: 'assets/images/view-red.png'
         },

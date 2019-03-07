@@ -8,7 +8,7 @@ export default class Index extends Component {
     navigationBarTitleText: '首页'
   }
 
-  componentWillMount () { }
+  componentWillMount () { } q
 
   componentDidMount () { }
 
